@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Hello World from template</h1>
+<ul>
+    {% for fruit in fruits_list %}
+        <li>{{ fruit }}</li>
+    {% endfor %}
+</ul>
+<button onClick="show_alert();">Click Me</button>
+<script src={% static 'pages/js/test.js' %}></script>
+{% endblock %}
