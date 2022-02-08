@@ -1,0 +1,23 @@
+{
+  "name": "mydjangodir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahdeshmukh/mydjango.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahdeshmukh/mydjango/issues"
+  },
+  "homepage": "https://github.com/ahdeshmukh/mydjango#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bs5-lightbox": "^1.7.8"
+  }
+}

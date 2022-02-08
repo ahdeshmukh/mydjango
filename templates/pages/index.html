@@ -2,10 +2,46 @@
 {% load static %}
 
 {% block content %}
-<h1>Hello World from template</h1>
-<ul>
-    {% for fruit in fruits_list %}
-        <li>{{ fruit }}</li>
-    {% endfor %}
-</ul>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body ...
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Hello World from template</h1>
+    <ul>
+        {% for fruit in fruits_list %}
+            <li>{{ fruit }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Open modal
+    </button>
+
+    <a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-caption="This describes the image">
+        <img src="https://unsplash.it/600.jpg?image=250" class="img-fluid">
+    </a>
+
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.7.8/dist/index.bundle.min.js"></script> {% endcomment %}
+    <script src="{% static 'bs5-lightbox/dist/index.bundle.min.js' %}"></script>
+
 {% endblock %}

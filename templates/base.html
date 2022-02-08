@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Real Estate</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
 </head>
 <body>
-    {% block content %} {% endblock %}
+    <div class="container mt-3">
+        {% block content %} {% endblock %}
+    </div>
 </body>
 </html>
