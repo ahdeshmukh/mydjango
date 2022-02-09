@@ -2,46 +2,36 @@
 {% load static %}
 
 {% block content %}
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-        
-                <!-- Modal body -->
-                <div class="modal-body">
-                    Modal body ...
-                </div>
-        
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <h1>Hello World from template</h1>
+    {% comment %} <h1>Hello World from template</h1>
     <ul>
         {% for fruit in fruits_list %}
             <li>{{ fruit }}</li>
         {% endfor %}
     </ul>
-
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-        Open modal
+    
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
     </button>
-
-    <a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-caption="This describes the image">
-        <img src="https://unsplash.it/600.jpg?image=250" class="img-fluid">
-    </a>
-
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.7.8/dist/index.bundle.min.js"></script> {% endcomment %}
-    <script src="{% static 'bs5-lightbox/dist/index.bundle.min.js' %}"></script>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Modal Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
 
 {% endblock %}
