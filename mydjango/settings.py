@@ -144,3 +144,8 @@ STATIC_ROOT = '/var/mydjango/static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 INTERNAL_IPS = ['mydjango.local','127.0.0.1']
+
+
+# Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'

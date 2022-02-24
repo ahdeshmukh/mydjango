@@ -13,6 +13,7 @@ class Listing(models.Model):
     zipcode = models.CharField(max_length=20)
     description = models.TextField(blank=True)
     price = models.IntegerField()
+    bedrooms = models.IntegerField(default=0)
     bathrooms = models.DecimalField(max_digits=4, decimal_places=1)
     garage = models.IntegerField(default=0)
     sqft = models.IntegerField()
