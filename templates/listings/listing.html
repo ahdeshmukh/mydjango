@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
+
+{% load static %}
 {% load humanize %}
+
+{% block additional_css %}
+    <link rel="stylesheet" href="{% static 'lightbox2/dist/css/lightbox.min.css' %}">
+{% endblock additional_css %}
 
 {% block content %}
 
@@ -197,3 +203,7 @@
 
 
 {% endblock %}
+
+{% block additional_js %}
+    <script type="text/javascript" src="{% static 'lightbox2/dist/js/lightbox.min.js' %}"></script>
+{% endblock additional_js %}
